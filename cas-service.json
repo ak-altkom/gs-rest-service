@@ -1,0 +1,28 @@
+{
+  "kind": "Template",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "cas-external-service-template"
+  },
+  "objects": [
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "cas-external-service"
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "cas",
+            "protocol": "TCP",
+            "port": 9080,
+            "targetPort": 9080,
+            "nodePort": 0
+          }
+        ],
+        "selector": {}
+      }
+    }
+  ]
+}

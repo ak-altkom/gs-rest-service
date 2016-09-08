@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 /**
  * @author akrol
  */
-@FeignClient(value = "cas", url = "localhost:9080")
+@FeignClient(value = "cas")
 @RequestMapping("energeia-cas/")
 public interface CasClient {
 

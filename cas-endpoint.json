@@ -1,0 +1,31 @@
+{
+  "kind": "Template",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "cas-endpoint-template"
+  },
+  "objects": [
+    {
+      "kind": "Endpoints",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "cas-external-service"
+      },
+      "subsets": [
+        {
+          "addresses": [
+            {
+              "ip": "10.0.2.2"
+            }
+          ],
+          "ports": [
+            {
+              "name": "cas",
+              "port": 9080
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
